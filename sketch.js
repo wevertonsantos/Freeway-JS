@@ -42,10 +42,10 @@ function movimentadoCarro1(){
 
 function movimentandoAtor(){
   if(keyIsDown(UP_ARROW)){
-    yAtor += - 2;
+    yAtor -= 3;
   }
 
   if(keyIsDown(DOWN_ARROW)){
-    yAtor -= - 2;
+    yAtor += 3;
   }
 }
