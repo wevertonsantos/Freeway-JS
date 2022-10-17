@@ -1,46 +1,35 @@
 // Variáveis dos carros
 
-// Carro 1
-let xCarro = 650;
-let yCarro = 45;
-let velocidadeCarro1 = 2;
-
-// Carro 2
-let xCarro2 = 650;
-let yCarro2 = 100;
-let velocidadeCarro2 = 2.5;
-
-// Carro 3
-let xCarro3 = 650;
-let yCarro3 = 155;
-let velocidadeCarro3 = 3.2;
+let xCarros = [650, 650, 650];
+let yCarros = [45, 100, 155];
+let velocidadeCarros = [2, 2.5, 3.2];
 
 //*** Funções dos carros ***//
 
 // Mostrando carros
 
 function mostrarCarro(){
-  image(imagemCarro1, xCarro, yCarro, 60, 30)
-  image(imagemCarro2, xCarro2, yCarro2, 60, 30)
-  image(imagemCarro3, xCarro3, yCarro3, 60, 30)
+  image(imagemCarro1, xCarros[0], yCarros[0], 60, 30)
+  image(imagemCarro2, xCarros[1], yCarros[1], 60, 30)
+  image(imagemCarro3, xCarros[2], yCarros[2], 60, 30)
 }
 
 // Movimentando carros
 
 function movimentadoCarro(){
-    xCarro += - velocidadeCarro1;
-    xCarro2 += - velocidadeCarro2;
-    xCarro3 += - velocidadeCarro3;
+    xCarros[0] += - velocidadeCarros[0];
+    xCarros[1] += - velocidadeCarros[1];
+    xCarros[2] += - velocidadeCarros[2];
   }
 
 function voltaCarroDoInicio(){
-  if(xCarro < -50){
-    xCarro = 650;
+  if(xCarros[0] < -50){
+    xCarros[0] = 650;
   }
-  if(xCarro2 < -50){
-    xCarro2 = 650;
+  if(xCarros[1] < -50){
+    xCarros[1] = 650;
   }
-  if(xCarro3 < -50){
-    xCarro3 = 650;
+  if(xCarros[2] < -50){
+    xCarros[2] = 650;
   }
 }
