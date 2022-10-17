@@ -8,4 +8,5 @@ function draw() {
     mostrarAtor()
     movimentadoCarro()
     movimentandoAtor()
+    voltaCarroDoInicio()
   }
