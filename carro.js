@@ -3,6 +3,8 @@
 let xCarros = [650, 650, 650];
 let yCarros = [45, 100, 155];
 let velocidadeCarros = [2, 2.5, 3.2];
+let carroComprimento = 60;
+let carroAltura = 30;
 
 //*** Funções dos carros ***//
 
@@ -10,7 +12,7 @@ let velocidadeCarros = [2, 2.5, 3.2];
 
 function mostrarCarro(){
   for(let i = 0; i < imagemCarros.length; i += 1){
-    image(imagemCarros[i], xCarros[i], yCarros[i], 60, 30)
+    image(imagemCarros[i], xCarros[i], yCarros[i], carroComprimento, carroAltura)
   }
 }
 

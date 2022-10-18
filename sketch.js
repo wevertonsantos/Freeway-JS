@@ -9,4 +9,5 @@ function draw() {
     movimentadoCarro()
     movimentandoAtor()
     voltaCarroDoInicio()
+    colisao()
   }
