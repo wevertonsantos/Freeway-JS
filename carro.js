@@ -17,21 +17,20 @@ function mostrarCarro(){
 // Movimentando carros
 
 function movimentadoCarro(){
-    xCarros[0] += - velocidadeCarros[0];
-    xCarros[1] += - velocidadeCarros[1];
-    xCarros[2] += - velocidadeCarros[2];
+    for(let i = 0; i < imagemCarros.length; i += 1)
+    xCarros[i] -= velocidadeCarros[i];
   }
 
 // Carros para sempre
 
 function voltaCarroDoInicio(){
-  if(xCarros[0] < -50){
-    xCarros[0] = 650;
+  for(let i = 0; i < imagemCarros.length; i += 1){
+  if(passouTodaTela(xCarros[i])){
+    xCarros[i] = 650;
+    }
   }
-  if(xCarros[1] < -50){
-    xCarros[1] = 650;
-  }
-  if(xCarros[2] < -50){
-    xCarros[2] = 650;
-  }
+}
+
+function passouTodaTela(xCarro){
+  return xCarro < - 50;
 }
