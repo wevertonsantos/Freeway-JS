@@ -9,9 +9,9 @@ let velocidadeCarros = [2, 2.5, 3.2];
 // Mostrando carros
 
 function mostrarCarro(){
-  image(imagemCarro1, xCarros[0], yCarros[0], 60, 30)
-  image(imagemCarro2, xCarros[1], yCarros[1], 60, 30)
-  image(imagemCarro3, xCarros[2], yCarros[2], 60, 30)
+  for(let i = 0; i < imagemCarros.length; i += 1){
+    image(imagemCarros[i], xCarros[i], yCarros[i], 60, 30)
+  }
 }
 
 // Movimentando carros
@@ -21,6 +21,8 @@ function movimentadoCarro(){
     xCarros[1] += - velocidadeCarros[1];
     xCarros[2] += - velocidadeCarros[2];
   }
+
+// Carros para sempre
 
 function voltaCarroDoInicio(){
   if(xCarros[0] < -50){
